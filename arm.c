@@ -44,11 +44,17 @@ void loop() {
       delay(15);  //delay 15ms for each degree
       }
 
-    // return to initial position.  Note: this is only for initial testing
- 
-    for ( pos1=90; pos1 >= 0; pos1 -=1) {  // loop 90 degrees
-      myservo1.write(pos1);  // apply motion by degree
+// move servos 2 and 3 30 degrees upward
+
+     for ( pos2=0, pos3=0; pos2 <= 30 && pos3 <=30; pos2 +=1, pos3 +=1) {  // loop 90 degrees
+      myservo2.write(pos2); 
+      myservo3.write(pos3);
       delay(15);  //delay 15ms for each degree
       }
+
+
+     while (1);
       
 }
+
+
